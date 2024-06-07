@@ -5,10 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/search-section-style.css">
+  <link rel="stylesheet" href="assets/css/weather-box-style.css">
+  <link rel="stylesheet" href="assets/css/error-box-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   
-
+  <main>
+    <section class="search-section">
+      <img class="pin" src="assets/img/location-pin.svg" alt="location pin icon">
+      <input type="text" class="search-bar" placeholder="Enter your location">
+      <button class="search-button">
+          <img src="assets/img/search-icon.svg" alt="search icon">
+      </button>
+    </section>
+    <section class="weather-box">
+        <div class="weather-screen">
+          <p class="temperature">25° C</p>
+          <p class="city">Naples</p>
+          <p class="weather-description">Few Clouds</p>
+        </div>
+        <div class="weather-details">
+          <div class="wind">
+            <img src="assets/img/wind-icon.svg" alt="wind icon">
+            <p>6.2m/s</p>
+          </div>
+          <div class="humidity">
+            <img src="assets/img/humidity-icon.svg" alt="humidity icon">
+            <p>58%</p>
+          </div>
+          <div class="rain">
+            <img src="assets/img/rain-icon.svg" alt="rain icon">
+            <p>0 mm/h</p>
+          </div>
+        </div>
+    </section>
+    <section class="error-box">
+        <img src="assets/img/error-icon.svg" alt="">
+        <p>Invalid location!</p>
+    </section>
+  </main>
 
   <script src="assets/js/index.js"></script>
 </body>

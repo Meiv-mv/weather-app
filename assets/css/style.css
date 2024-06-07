@@ -3,4 +3,30 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+img{    /* temporary */
+  width: 15px;
+  height: 15px;
+}
+
+body{
+  background-color: #253949;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  background-color: #c3e4f3;
+  width: 290px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
