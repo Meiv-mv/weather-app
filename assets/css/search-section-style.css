@@ -25,21 +25,26 @@
   width: 40px;
 }
 
-.search-button{
+.search-btn{
   height: 40px;
   width: 40px;
   border: none;
   border-radius: 50%;
   background-color: #ff9b83;
+  transition: background-color 0.3s linear;
 }
 
-.search-button img{
+.search-btn img{
   height: 25px;
   width: 25px;
   margin-bottom: 2px;
   vertical-align: middle;
 }
 
-.search-button:active{
+.search-btn:hover{
+  background-color: #259ed9;
+}
+
+.search-btn:active{
   opacity: 0.6;
 }
