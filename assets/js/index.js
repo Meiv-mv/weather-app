@@ -4,16 +4,6 @@ const searchBtn = document.querySelector(".search-btn")
 const main = document.querySelector("main")
 const searchBar = document.querySelector(".search-bar")
 
-// searchBtn.addEventListener("click", function(){
-//   weatherBox.style.display = "flex"
-//   main.style.height = "520px"
-// })
-
-// searchBtn.addEventListener("click", function(){
-//   errorBox.style.display = "flex"
-//   main.style.height = "320px"
-// })
-
 searchBtn.addEventListener("click", function(){
   const APIkey = "21ea3aed0c038dd87da48751494a078f"
   const city = searchBar.value
@@ -25,6 +15,10 @@ searchBtn.addEventListener("click", function(){
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}&units=metric`)
   .then(response => response.json())
   .then(json => {
+
+    errorBox.style.display = "none"
+    weatherBox.style.display = "none"
+
 
     if(json.cod === "404"){
       errorBox.style.display = "flex"
@@ -41,39 +35,8 @@ searchBtn.addEventListener("click", function(){
     const cloudiness = document.getElementById("cloudiness-value")
     const id = json.weather[0].id
 
-    // weatherIcon.src = `https://openweathermap.org/img/wn/${json.weather[0].icon}.png` using this if a want to take image directly with the APIs, but the quality is low
-
-    // switch (json.weather[0].id){
-    //   case 800:
-    //     weatherIcon.src = "assets/img/weather-condition/clear-sky.svg"
-    //     break;
-    //   case 801:
-    //     weatherIcon.src = "assets/img/weather-condition/few-clouds.svg"
-    //     break;
-    //   case 802:
-    //     weatherIcon.src = "assets/img/weather-condition/scattered-clouds.svg"
-    //     break;
-    //   case 803 || 804:
-    //     weatherIcon.src = "assets/img/weather-condition/broken-clouds.svg"
-    //     break;
-    //   case 520 || 521 || 300 || 301 || 302 || 310 || 311 || 312 || 313 || 314 || 321:
-    //     weatherIcon.src = "assets/img/weather-condition/shower-rain.svg"
-    //     break;
-    //   case 500 || 501 || 502 || 503 || 504:
-    //     weatherIcon.src = "assets/img/weather-condition/rain.svg"
-    //     break;
-    //   case 200 || 201 || 202 || 210 || 211 || 212 || 221 || 230 || 231 || 232:
-    //     weatherIcon.src = "assets/img/weather-condition/thunderstorm.svg"
-    //     break;
-    //   case 511 || 600 || 601 || 602 || 611 || 612 || 613 || 615 || 616 || 620 || 621 || 622:
-    //     weatherIcon.src = "assets/img/weather-condition/snow.svg"
-    //     break;
-    //   case 701 || 711 || 721 || 731 || 741 || 751 || 761 || 762 || 771 || 781:
-    //     weatherIcon.src = "assets/img/weather-condition/mist.svg"
-    //     break;
-    //   default:
-    //     weatherIcon.src = "assets/img/weather-icon.svg"
-    // }
+    // weatherIcon.src = `https://openweathermap.org/img/wn/${json.weather[0].icon}.png` 
+    // using this if a want to take image directly with the APIs, but the quality is low
 
     if (id === 800){
       weatherIcon.src = "assets/img/weather-condition/clear-sky.svg"
