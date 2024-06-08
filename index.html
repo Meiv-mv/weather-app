@@ -24,7 +24,7 @@
     </section>
     <section class="weather-box">
         <div class="weather-screen">
-          <img src="assets/img/weather-icon.svg" alt="weather icon">
+          <img id="weather-icon" src="assets/img/weather-icon.svg" alt="weather icon">
           <p class="temperature">25° C</p>
           <p class="city">Naples</p>
           <p class="weather-description">Few Clouds</p>
@@ -32,20 +32,20 @@
         <div class="weather-details">
           <div class="wind">
             <img src="assets/img/wind-icon.svg" alt="wind icon">
-            <p>6.2m/s</p>
+            <p id="wind-value">6.2m/s</p>
           </div>
           <div class="humidity">
             <img src="assets/img/humidity-icon.svg" alt="humidity icon">
-            <p>58%</p>
+            <p id="humidity-value">58%</p>
           </div>
-          <div class="rain">
-            <img src="assets/img/rain-icon.svg" alt="rain icon">
-            <p>0 mm/h</p>
+          <div class="cloudiness">
+            <img src="assets/img/cloudiness-icon.svg" alt="cloudiness icon">
+            <p id="cloudiness-value">0%</p>
           </div>
         </div>
     </section>
     <section class="error-box">
-        <img src="assets/img/error-icon.svg" alt="">
+        <img src="assets/img/error-icon.svg" alt="error icon">
         <p>Invalid location!</p>
     </section>
   </main>
