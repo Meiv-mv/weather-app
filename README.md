@@ -7,6 +7,6 @@ With this site I wanted to work with third part APIs, so I used OpenWeather API 
 I also explored new things like animations/transitions with CSS.
 
 **Future Update:**<br>
- -Dark Theme
- -More responsivness for larger screen
- -Minor QOL feature
+ - Dark Theme
+ - More responsivness for larger screen
+ - Minor QOL feature
